@@ -1,0 +1,180 @@
+/* Basic styling */
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Raleway", sans-serif;
+	background: #232526; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#414345,
+		#232526
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#414345,
+		#232526
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	color: white;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+h1 {
+	font-size: 5rem;
+}
+h2 {
+	font-size: 3rem;
+	color: #fa5f55;
+}
+h3 {
+	font-size: 2rem;
+}
+.container {
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	height: 100vh;
+}
+/* Nav Styling */
+nav {
+	width: 100vw;
+	height: 15vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+/* Content styling */
+content {
+	width: 100vw;
+	height: 95vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+/* Animated Footer prompting for scroll*/
+footer {
+	height: 5vh;
+	width: 100vw;
+}
+footer {
+	font-size: 2rem;
+	color: #fa5f55;
+}
+/* animating footer icon to bounce */
+.bounce {
+	transform: translateY(100%);
+	animation: bounce 2s cubic-bezier(0.39, 0.575, 0.565, 1);
+	animation-iteration-count: infinite;
+}
+@keyframes bounce {
+	0% {
+		transform: scale(1, 1) translateY(0);
+	}
+	10% {
+		transform: scale(1.1, 0.9) translateY(0);
+	}
+	30% {
+		transform: scale(0.9, 1.1) translateY(-50px);
+	}
+	50% {
+		transform: scale(1.05, 0.95) translateY(0);
+	}
+	57% {
+		transform: scale(1, 1) translateY(-15px);
+	}
+	64% {
+		transform: scale(1, 1) translateY(0);
+	}
+	100% {
+		transform: scale(1, 1) translateY(0);
+	}
+}
+/* Style pages to display flex and be 100 vh */
+.page {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	scroll-snap-align: start;
+}
+/* Page 1 (P1) Specific Styling */
+.p1 {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.hero {
+	color: #fa5f55;
+	text-shadow: 3px 4px #36454f;
+}
+.p1 h4 {
+	font-size: 2.3rem;
+	color: #fa5f55;
+	text-shadow: 3px 4px #36454f;
+}
+.p1 p {
+	font-size: 2rem;
+}
+.p1 ul {
+	display: flex;
+	flex-direction: row;
+	flex: 0.5 auto;
+}
+.p1 li {
+	font-size: 1.7rem;
+	list-style-type: none;
+	flex: 1 auto;
+}
+.p1 li:hover {
+	color: #fa5f55;
+	text-shadow: 3px 4px #36454f;
+}
+.p1 content {
+	width: 100vw;
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/* Page 2 (P2) Specific Styling */
+.p2 content {
+	padding: 10px;
+}
+#board {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.gallerySquare {
+	border: 2px solid white;
+	border-radius: 1rem;
+	margin: 10px;
+	min-width: 70vw;
+	min-height: 25vh;
+}
+#box1 {
+	background-image: url(terminalStartPage.JPG);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#box2 {
+	background-image: url(todoList.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#box3 {
+	background-image: url(wordleClone.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
